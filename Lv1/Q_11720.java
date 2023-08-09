@@ -8,7 +8,7 @@
  * 출력
  * 입력으로 주어진 숫자 N개의 합을 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.*;
 

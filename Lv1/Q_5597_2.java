@@ -10,7 +10,7 @@
  * 출력
  * 출력은 2줄이다. 1번째 줄엔 제출하지 않은 학생의 출석번호 중 가장 작은 것을 출력하고, 2번째 줄에선 그 다음 출석번호를 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

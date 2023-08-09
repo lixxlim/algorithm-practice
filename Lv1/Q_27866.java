@@ -20,7 +20,7 @@
  * $S$의 
  * $i$번째 글자를 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

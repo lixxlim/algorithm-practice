@@ -8,7 +8,7 @@
  * 출력
  * 첫째 줄에 입력으로 주어진 단어의 길이를 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -8,7 +8,7 @@
  * 출력
  * 각 테스트 케이스에 대해서 주어진 문자열의 첫 글자와 마지막 글자를 연속하여 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

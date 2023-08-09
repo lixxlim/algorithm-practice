@@ -8,7 +8,7 @@
  * 출력
  * 입력으로 주어진 글자의 아스키 코드 값을 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

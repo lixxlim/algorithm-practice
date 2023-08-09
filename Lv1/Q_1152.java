@@ -8,7 +8,7 @@
  * 출력
  * 첫째 줄에 단어의 개수를 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.*;
 import java.util.StringTokenizer;

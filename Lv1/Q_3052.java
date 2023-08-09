@@ -10,7 +10,7 @@
  * 출력
  * 첫째 줄에, 42로 나누었을 때, 서로 다른 나머지가 몇 개 있는지 출력한다.
  */
-package source;
+package Lv1;
 
 import java.io.*;
 import java.util.*;
