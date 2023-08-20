@@ -10,7 +10,7 @@
  * 출력
  * 첫째 줄에 검증수를 출력한다.
  */
-package class1;
+package _class1;
 
 import java.io.*;
 import java.util.*;

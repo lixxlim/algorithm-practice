@@ -8,7 +8,7 @@
  * 출력
  * 첫째 줄부터 N번째 줄 까지 차례대로 출력한다.
  */
-package class1;
+package _class1;
 
 import java.io.*;
 
