@@ -23,11 +23,12 @@ public class _1181 {
       int repeat = Integer.parseInt(br.readLine());
       String[] values = new String[repeat];
       for (int i = 0; i < repeat; i++) values[i] = br.readLine();
-      solution(values);
+      solution3(values);
     } catch (Exception e) {}
   }
 
-  public static void solution(String... values) {
+  //548ms
+  public static void solution1(String[] values) {
     Set<String> set = new TreeSet<>((v1, v2) -> {
       if(v1.length() < v2.length()) return -1;
       if(v1.length() > v2.length()) return 1;
@@ -36,5 +37,29 @@ public class _1181 {
     set.addAll(List.of(values));
     set.forEach(System.out::println);
   }
+
+  //380ms(제일 빠름)
+  public static void solution2(String[] values) throws IOException {
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    Set<String> set = new TreeSet<>((v1, v2) -> {
+      if(v1.length() == v2.length()) return v1.compareTo(v2);
+      return v1.length() - v2.length();
+    });
+    set.addAll(List.of(values));
+    for(String s : set) { bw.write(s+"\n");}
+    bw.flush();
+    bw.close();
+  }
   
+  //384ms
+  public static void solution3(String[] values) {
+    StringBuilder sb = new StringBuilder();
+    Set<String> set = new TreeSet<>((v1, v2) -> {
+      if(v1.length() == v2.length()) return v1.compareTo(v2);
+      return v1.length() - v2.length();
+    });
+    set.addAll(List.of(values));
+    set.forEach(v -> sb.append(v).append("\n"));
+    System.out.println(sb);
+  }
 }
