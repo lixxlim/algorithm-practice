@@ -38,10 +38,10 @@ public class _10250 {
   public static void solution(String[] values) {
     StringTokenizer st;
     for(String s : values) {
-      int h = 0, w = 0, n = 0, i = 0;
+      int h = 0, n = 0, i = 0;
       st = new StringTokenizer(s);
       h = Integer.parseInt(st.nextToken());
-      w = Integer.parseInt(st.nextToken());
+      Integer.parseInt(st.nextToken());
       n = Integer.parseInt(st.nextToken());
 
       while(h*++i < n) {}
