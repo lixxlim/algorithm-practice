@@ -12,7 +12,7 @@ public class _Template {
     } catch (Exception e) {}
   }
 
-  public static void solution(String... values) {
+  public static void solution(String[] values) {
 
     System.out.println(values);
   }
