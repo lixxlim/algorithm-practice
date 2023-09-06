@@ -25,3 +25,12 @@ public class _Template {
     System.out.println(values);
   }
 }
+
+
+class TimeChecker {
+  public static void main(String[] args) {
+    long current = System.currentTimeMillis();
+    _Template.main(null);
+    System.out.println(System.currentTimeMillis() - current + " ms");
+  }
+}
