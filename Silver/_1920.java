@@ -12,6 +12,7 @@ package Silver;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.*;
 
 public class _1920 {
   public static void main(String[] args) {
@@ -33,6 +34,20 @@ public class _1920 {
     Arrays.sort(N);
     for(int i: M) {
       sb.append(Arrays.binarySearch(N, i) >= 0 ? "1" : "0")
+        .append("\n");
+    }
+    System.out.println(sb);
+  }
+
+  public static void solution2(int[] N, int[] M) {
+    StringBuilder sb = new StringBuilder();
+    HashSet<Integer> set = new HashSet<>(
+      Arrays.stream(N)
+        .boxed()
+        .collect(Collectors.toList())
+    );
+    for(int i: M) {
+      sb.append(set.contains(i) ? "1" : "0")
         .append("\n");
     }
     System.out.println(sb);
