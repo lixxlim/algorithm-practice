@@ -28,13 +28,14 @@ public class _Template {
 }
 
 
-class TimeChecker {
+class Tester {
 
   static HashSet<Integer> N = new HashSet<>();
   static HashSet<Integer> M = new HashSet<>();
   static {
-    for(int i = 0; i < 10_0000; i++) { N.add(randomAmount());}
-    for(int i = 0; i < 10_0000; i++) { M.add(randomAmount());}
+    Random r = new Random();
+    for(int i = 0; i < 10_0000; i++) { N.add(r.nextInt());}
+    for(int i = 0; i < 10_0000; i++) { M.add(r.nextInt());}
   }
 
   public static void main(String[] args) throws IOException {
@@ -47,6 +48,4 @@ class TimeChecker {
       ((after - before)%1000 + " s")
     );
   }
-
-  public static int randomAmount() { return (int)(Math.random()*10_0000); }
 }
