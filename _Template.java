@@ -1,6 +1,7 @@
 /**
  */
 import java.io.*;
+import java.util.*;
 
 public class _Template {
   public static void main(String[] args) {
@@ -28,9 +29,24 @@ public class _Template {
 
 
 class TimeChecker {
-  public static void main(String[] args) {
-    long current = System.currentTimeMillis();
-    _Template.main(null);
-    System.out.println(System.currentTimeMillis() - current + " ms");
+
+  static HashSet<Integer> N = new HashSet<>();
+  static HashSet<Integer> M = new HashSet<>();
+  static {
+    for(int i = 0; i < 10_0000; i++) { N.add(randomAmount());}
+    for(int i = 0; i < 10_0000; i++) { M.add(randomAmount());}
   }
+
+  public static void main(String[] args) throws IOException {
+    long before = System.currentTimeMillis();
+    _Template.solution(null);
+    long after = System.currentTimeMillis();
+    System.out.println(
+      "N size: "+N.size() + " | M size: "+M.size() + "\n" +
+      ((after - before)/1000 + ".") +
+      ((after - before)%1000 + " s")
+    );
+  }
+
+  public static int randomAmount() { return (int)(Math.random()*10_0000); }
 }
