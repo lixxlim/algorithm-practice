@@ -1,0 +1,5 @@
+/home/ubuntu/files/dotnet/bj/bin/Debug/net7.0/publish/dotnet
+/home/ubuntu/files/dotnet/bj/bin/Debug/net7.0/publish/dotnet.dll
+/home/ubuntu/files/dotnet/bj/bin/Debug/net7.0/publish/dotnet.deps.json
+/home/ubuntu/files/dotnet/bj/bin/Debug/net7.0/publish/dotnet.runtimeconfig.json
+/home/ubuntu/files/dotnet/bj/bin/Debug/net7.0/publish/dotnet.pdb
