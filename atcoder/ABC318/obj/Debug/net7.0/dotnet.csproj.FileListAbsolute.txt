@@ -43,3 +43,17 @@
 /home/ubuntu/files/algo/atcoder/ABC318/bin/Debug/net7.0/dotnet.pdb
 /home/ubuntu/files/algo/atcoder/ABC318/obj/Debug/net7.0/dotnet.genruntimeconfig.cache
 /home/ubuntu/files/algo/atcoder/ABC318/obj/Debug/net7.0/ref/dotnet.dll
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\bin\Debug\net7.0\dotnet.exe
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\bin\Debug\net7.0\dotnet.deps.json
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\bin\Debug\net7.0\dotnet.runtimeconfig.json
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\bin\Debug\net7.0\dotnet.dll
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\bin\Debug\net7.0\dotnet.pdb
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\dotnet.GeneratedMSBuildEditorConfig.editorconfig
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\dotnet.AssemblyInfoInputs.cache
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\dotnet.AssemblyInfo.cs
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\dotnet.csproj.CoreCompileInputs.cache
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\dotnet.dll
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\refint\dotnet.dll
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\dotnet.pdb
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\dotnet.genruntimeconfig.cache
+d:\workspace\baekjoon-algorithm\atcoder\ABC318\obj\Debug\net7.0\ref\dotnet.dll

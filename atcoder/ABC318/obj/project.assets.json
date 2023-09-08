@@ -8,24 +8,30 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/home/ubuntu/.nuget/packages/": {}
+    "C:\\Users\\임은총\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ubuntu/files/algo/atcoder/ABC318/dotnet.csproj",
+      "projectUniqueName": "d:\\workspace\\baekjoon-algorithm\\atcoder\\ABC318\\dotnet.csproj",
       "projectName": "dotnet",
-      "projectPath": "/home/ubuntu/files/algo/atcoder/ABC318/dotnet.csproj",
-      "packagesPath": "/home/ubuntu/.nuget/packages/",
-      "outputPath": "/home/ubuntu/files/algo/atcoder/ABC318/obj/",
+      "projectPath": "d:\\workspace\\baekjoon-algorithm\\atcoder\\ABC318\\dotnet.csproj",
+      "packagesPath": "C:\\Users\\임은총\\.nuget\\packages\\",
+      "outputPath": "d:\\workspace\\baekjoon-algorithm\\atcoder\\ABC318\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/ubuntu/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\임은총\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -59,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
