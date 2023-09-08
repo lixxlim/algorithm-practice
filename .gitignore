@@ -1,0 +1,5 @@
+.git/*
+.vscode/*
+atcoder/*
+!atcoder/*.cs
+*.swp

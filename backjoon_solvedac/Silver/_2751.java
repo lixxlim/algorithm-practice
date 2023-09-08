@@ -33,12 +33,10 @@ public class _2751 {
   }
 
   public static int[] quickSort(int[] nums, int pivot) {
-    //TODO
     return nums;
   }
 
   public static int[] mergeSort(int[] nums) {
-    //TODO
     return nums;
   }
 
