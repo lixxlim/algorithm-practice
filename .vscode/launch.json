@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_2669",
+      "request": "launch",
+      "mainClass": "Silver._2669",
+      "projectName": "baekjoon-algorithm_6d035ade"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "Silver.Test",
+      "projectName": "baekjoon-algorithm_6d035ade"
+    },
+    {
+      "type": "java",
       "name": "_1920",
       "request": "launch",
       "mainClass": "Silver._1920",
