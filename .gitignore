@@ -1,5 +1,8 @@
+#atcoder
+atcoder/*
+!atcoder/src/
+
+#common
 .git/*
 .vscode/*
-atcoder/*
-!atcoder/*.cs
 *.swp

@@ -1,13 +1,13 @@
 ﻿#nullable disable
 using System;
 
-public class Programs
-{
-	public static void Main(String[] args) 
-	{
-		B_OverlappingSheets.Solution();
-	}
-}
+// public class Programs
+// {
+// 	public static void Main(String[] args) 
+// 	{
+// 		B_OverlappingSheets.Solution();
+// 	}
+// }
 
 class A_FullMoon
 {
