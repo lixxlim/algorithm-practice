@@ -5,10 +5,10 @@ import java.util.*;
 
 public class _Template {
   public static void main(String[] args) {
-      try{
-        String[] values = getInput();
-        solution(values);
-      } catch (Exception e) { e.printStackTrace(); }
+    try{
+      String[] values = getInput();
+      solution(values);
+    } catch (Exception e) { e.printStackTrace(); }
   }
 
   public static String[] getInput() throws IOException {
