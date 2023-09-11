@@ -3,10 +3,10 @@
 
 class A_LegendaryPlayers
 {
-	static void Main()
-	{
-		Solution();
-	}
+	// static void Main()
+	// {
+	// 	Solution();
+	// }
 
 	static void Solution()
 	{
