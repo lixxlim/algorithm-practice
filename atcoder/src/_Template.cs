@@ -1,6 +1,5 @@
 ﻿// 
 #nullable disable
-using System;
 
 class Template
 {
