@@ -4,10 +4,10 @@
 
 class B_Bingo
 {
-	static void Main()
-	{
-		Solution();
-	}
+	// static void Main()
+	// {
+	// 	Solution();
+	// }
 
 	static void Solution()
 	{
