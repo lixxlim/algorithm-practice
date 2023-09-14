@@ -3,10 +3,10 @@
 
 class B_TaxRate
 {
-	static void Main()
-	{
-		Console.WriteLine(Solution());
-	}
+	// static void Main()
+	// {
+	// 	Console.WriteLine(Solution());
+	// }
 
 	static string Solution()
 	{
