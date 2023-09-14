@@ -3,10 +3,10 @@
 
 class B_121
 {
-	static void Main()
-	{
-		Solution();
-	}
+	// static void Main()
+	// {
+	// 	Solution();
+	// }
 
 	static void Solution()
 	{
