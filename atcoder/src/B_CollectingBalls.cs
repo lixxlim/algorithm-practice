@@ -3,10 +3,10 @@
 
 class B_CollectingBalls
 {
-	static void Main()
-	{
-		Solution();
-	}
+	// static void Main()
+	// {
+	// 	Solution();
+	// }
 
 	static void Solution()
 	{
