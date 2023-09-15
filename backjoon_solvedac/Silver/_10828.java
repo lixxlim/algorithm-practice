@@ -6,6 +6,7 @@ import java.util.*;
 
 public class _10828 {
 	public static void main(String[] args) throws Exception {
+        solutionNormal();
         solutionWithReflection();
 	}
 
