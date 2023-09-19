@@ -3,12 +3,12 @@
 
 class TravelingSalesmanAroundLake
 {
-	static void Main()
-	{
-        Console.WriteLine("--- Started ---");
-		Solution();
-        Console.WriteLine("--- Finished ---");
-	}
+	// static void Main()
+	// {
+    //     Console.WriteLine("--- Started ---");
+	// 	Solution();
+    //     Console.WriteLine("--- Finished ---");
+	// }
 
 	static void Solution()
 	{
