@@ -3,11 +3,11 @@
 
 class B_BreakNumber
 {
-	static void Main()
-	{
-		int n = int.Parse(Console.ReadLine());
-		Console.WriteLine(Solution(n));
-	}
+	// static void Main()
+	// {
+	// 	int n = int.Parse(Console.ReadLine());
+	// 	Console.WriteLine(Solution(n));
+	// }
 
 	static int Solution(int n)
 	{
