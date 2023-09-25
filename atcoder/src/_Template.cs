@@ -12,7 +12,8 @@ class Template
 
 	static void Solution()
 	{
-		int.Parse(Console.ReadLine());
+		int n = int.Parse(Console.ReadLine());
+        int[] v = Console.ReadLine().Split().Select(int.Parse).ToArray();
 		Console.WriteLine("");
 	}
 }
