@@ -10,7 +10,7 @@ public class _Template {
 			int[] ns = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 			String s = br.readLine();
 
-			solution(s);
+			System.out.printf("",n ,ns, s);
 		}
 	}
 
