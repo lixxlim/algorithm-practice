@@ -1,11 +1,15 @@
 // 
+// 
 import java.io.*;
 import java.util.*;
 
 public class _Template {
 	public static void main(String[] args) throws Exception {
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+			int n = Integer.parseInt(br.readLine());
+			int[] ns = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 			String s = br.readLine();
+
 			solution(s);
 		}
 	}
