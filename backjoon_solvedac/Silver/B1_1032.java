@@ -3,7 +3,6 @@
 package backjoon_solvedac.Silver;
 
 import java.io.*;
-import java.util.*;
 
 public class B1_1032 {
 	public static void main(String[] args) throws Exception {
@@ -13,16 +12,15 @@ public class B1_1032 {
             while(n-- > 0) {
                 str[n] = br.readLine();
             }
+
+            char[] chr = str[0].toCharArray();
             for(int i = 0; i < str[0].length(); i++) {
                 for(int j = 0; j < str.length; j++) {
-                    str[j].charAt(i)
-
+                    if(str[j].charAt(i) != chr[i]) chr[i] = '?';
                 }
             }
-		}
-	}
 
-	public static void solution(String s) {
-		System.out.println(s);
+            System.out.println(chr);
+		}
 	}
 }
