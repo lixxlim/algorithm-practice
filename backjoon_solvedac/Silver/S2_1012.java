@@ -1,5 +1,7 @@
 // https://www.acmicpc.net/problem/1012
 // 00:00:00
+package backjoon_solvedac.Silver;
+
 import java.io.*;
 import java.util.*;
 
@@ -11,22 +13,17 @@ public class S2_1012 {
 			StringBuilder sb = new StringBuilder();
 			while(n-- > 0) {
 				int[] ns = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-				sb.append(checkMap(createMap(new int[ns[0]][ns[1]], ns[2]))).append("\n");
+				int[][] map = new int[ns[0]][ns[1]];
+				while(ns[2]-- > 0) {
+					String[] st = br.readLine().split(" ");
+					int x = Integer.parseInt(st[0]);
+					int y = Integer.parseInt(st[1]);
+					map[x][y] = 1;
+				}
+				sb.append(checkMap(map)).append("\n");
 			}
 			System.out.println(sb);
 		}
-	}
-	
-	public static int[][] createMap(int[][] map, int n) throws Exception {
-		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-			while(n-- > 0) {
-				StringTokenizer st = new StringTokenizer(br.readLine());
-				int x = Integer.parseInt(st.nextToken());
-				int y = Integer.parseInt(st.nextToken());
-				map[x][y] = 1;
-			}
-		}
-		return map;
 	}
 	
 	public static int checkMap(int[][] map) {
