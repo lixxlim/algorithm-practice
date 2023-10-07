@@ -11,13 +11,13 @@ public class S2_1012 {
 			StringBuilder sb = new StringBuilder();
 			while(n-- > 0) {
 				int[] ns = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-				sb.append(checkMap(createMap(new int[ns[0]][ns[1]], ns[3]))).append("\n");
+				sb.append(checkMap(createMap(new int[ns[0]][ns[1]], ns[2]))).append("\n");
 			}
 			System.out.println(sb);
 		}
 	}
 	
-	public static int[][] createMap(int[][] map, int n) {
+	public static int[][] createMap(int[][] map, int n) throws Exception {
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			while(n-- > 0) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
@@ -32,8 +32,8 @@ public class S2_1012 {
 	public static int checkMap(int[][] map) {
 		int result = 0;
 		try {
-			for(int i = 0; i < map[0].lenth; i++) {
-				for(jnt j = 0; j < map[0][0].lenth; j++) {
+			for(int i = 0; i < map.length; i++) {
+				for(int j = 0; j < map[0].length; j++) {
 					if(map[i][j] != 1) continue; 
 					result++;
 					markupMap(map, i, j);
@@ -45,12 +45,10 @@ public class S2_1012 {
 
 	public static void markupMap(int[][] map, int i, int j) {
 		map[i][j] = -1;
-		for(int x = i-1; x <= i+1; x++) {
-			for(int y = j-1; y <= j+1; y++) {
-				if(map[x][y] != 1) continue;
-				markupMap(map, x, y);
-			}
-		}
+		try {if(map[i-1][j] == 1) markupMap(map, i-1, j);} catch(Exception e){};
+		try {if(map[i+1][j] == 1) markupMap(map, i+1, j);} catch(Exception e){};
+		try {if(map[i][j-1] == 1) markupMap(map, i, j-1);} catch(Exception e){};
+		try {if(map[i][j+1] == 1) markupMap(map, i, j+1);} catch(Exception e){};
 	}
 	
 }
