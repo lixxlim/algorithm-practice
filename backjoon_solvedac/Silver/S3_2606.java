@@ -10,30 +10,36 @@ public class S3_2606 {
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			int n = Integer.parseInt(br.readLine());
 			int m = Integer.parseInt(br.readLine());
+
             Boolean[] zombi = new Boolean[n+1];
             Arrays.fill(zombi, false);
-            HashMap<Integer, HashSet<Integer>> network = new HashMap<>();
+
+            Map<Integer, List<Integer>> network = new HashMap<>();
+            for(int i = 1; i <= n; i++) {
+                network.put(i, new ArrayList<Integer>());
+            }
+
             while(m-- > 0) {
                 StringTokenizer st = new StringTokenizer(br.readLine());
                 int from = Integer.parseInt(st.nextToken());
                 int to = Integer.parseInt(st.nextToken());
-                if(!network.containsKey(from)) network.put(from, new HashSet<Integer>(to));
-                if(network.containsKey(from)) network.get(from).add(to);
-                if(!network.containsKey(to)) network.put(to, new HashSet<Integer>(from));
-                if(network.containsKey(to)) network.get(to).add(from);
-                
+                network.get(from).add(to);
+                network.get(to).add(from);
             }
-            System.out.println(network);
-            Queue<Integer> q = new LinkedList<>();
-            q.offer(1);zombi[1] = true;
-            while(!q.isEmpty()) {
-                try {
-                    for(var i : network.get(q.poll())) {
-                        if(zombi[i]) q.poll();
-                        if(!zombi[i]) { q.offer(i); zombi[i] = true; }
-                    }
-                } catch (NullPointerException e) {}
+
+            Queue<Integer> que = new LinkedList<>();
+            que.offer(1);
+            while(!que.isEmpty()) {
+                int t = que.poll();
+                zombi[t] = true;
+                if(network.get(t).size() == 0) continue;
+                for(var i : network.get(t)) {
+                    if(zombi[i]) continue;
+                    que.offer(i);
+                    zombi[i] = true;
+                }
             }
+
             System.out.println(
                 Arrays.stream(zombi).filter(v -> v).count()
             );
