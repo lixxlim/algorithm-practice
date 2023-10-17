@@ -21,7 +21,7 @@ public class S3_26169 {
             return false;
         }
         int v = map[x][y]; map[x][y] = -1;
-        if(v == 1) apple++; if(apple == 2) return true;
+        if(v == 1 && ++apple == 2) return true;
 
         boolean result = 
             solution(map, x+1, y, move+1, apple) ||  
