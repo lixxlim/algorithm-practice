@@ -1,6 +1,6 @@
 package backjoon_solvedac.Silver;
 // https://www.acmicpc.net/problem/26170
-// 00:00:00
+// 00:51:01
 import java.io.*;
 import java.util.*;
 
