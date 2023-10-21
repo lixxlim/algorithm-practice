@@ -1,6 +1,6 @@
 package backjoon_solvedac.Bronze;
 // https://www.acmicpc.net/problem/2748
-// 00:00:00
+// 00:10:45
 import java.io.*;
 
 public class B2_2748 {
