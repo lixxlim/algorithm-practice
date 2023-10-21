@@ -34,11 +34,9 @@ public class S2_1260 {
             int target = queue.poll();
             sb.append(target).append(" ");
             for(int i = 0; i < graph[target].length; i++) {
-                if(graph[target][i] == 1) { queue.offer(i); }
+                if(graph[target][i] == 1) { queue.offer(i); graph[target][i] = 0; }
             }
-
         }
-        graph[target] = null;
         return false;
     }
 
