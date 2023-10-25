@@ -27,17 +27,20 @@ public class B3_24387 {
     }
 
     public static int partitioning(long[] arr, int left, int right) {
-        long pivot = arr[left];
+        int pivot = left;
         while(left < right) {
-            while(arr[right] > pivot && left < right){
+            while(arr[right] > arr[pivot] && left < right){
                 right--;
             }
-            while(arr[left] <= pivot && left < right){
+            while(arr[left] <= arr[pivot] && left < right){
                 left++;
             }
-            swap(arr, left, right);
+            if(left < right) { 
+                swap(arr, left, right);
+            } else {
+                swap(arr, pivot, right);
+            }
         }
-        swap(arr, 0, left);
         return left;
     }
 
