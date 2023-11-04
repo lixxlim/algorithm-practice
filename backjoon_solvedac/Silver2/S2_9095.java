@@ -1,6 +1,6 @@
 package backjoon_solvedac.Silver2;
 // https://www.acmicpc.net/problem/9095
-// 00:00:00
+// 00:28:05
 import java.io.*;
 
 public class S2_9095 {
