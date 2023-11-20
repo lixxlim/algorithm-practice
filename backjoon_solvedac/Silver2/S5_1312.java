@@ -17,5 +17,6 @@ public class S5_1312 {
         }
         result *= 10;
         System.out.println(result/b);
+        sc.close();
     }
 }
