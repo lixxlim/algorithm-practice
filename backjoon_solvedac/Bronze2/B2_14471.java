@@ -8,7 +8,7 @@ public class B2_14471 {
 	public static void main(String[] args) throws Exception {
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            int n = Integer.parseInt(st.nextToken());
+            Integer.parseInt(st.nextToken());
             int m = Integer.parseInt(st.nextToken());
             int[] money = new int[m];
             for (int i = 0; i < m; i++) {
