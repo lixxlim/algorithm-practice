@@ -6,3 +6,6 @@ atcoder/*
 .git/*
 .vscode/*
 *.swp
+
+#other
+*.exe
