@@ -7,7 +7,6 @@ int main(void)
 	float weight, height;
 	scanf("%f\n%f", &weight, &height);
 	float BMI = weight / (height * height);
-	printf("%f\n", BMI);
 	if(BMI > 25.0)
 	{
 		puts("Overweight");
