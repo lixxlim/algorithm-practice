@@ -6,6 +6,7 @@ atcoder/*
 .git/*
 .vscode/*
 *.swp
+python/.idea/*
 
 #other
 *.exe
