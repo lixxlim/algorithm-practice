@@ -12,3 +12,19 @@ java/.idea/*
 
 #other
 *.exe
+
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+!.java
+javac/javac.iml
+javac/out
+javac/.idea/*
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
