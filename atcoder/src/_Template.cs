@@ -2,7 +2,7 @@
 // 00:00:00
 #nullable disable
 
-class Template
+class _Template
 {
 	// static void Main()
 	// {
