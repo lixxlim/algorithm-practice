@@ -7,6 +7,8 @@ atcoder/*
 .vscode/*
 *.swp
 python/.idea/*
+java/.idea/*
+*.iml
 
 #other
 *.exe
