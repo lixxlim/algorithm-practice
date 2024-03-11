@@ -4,12 +4,12 @@
 
 class B5_28444
 {
-	static void Main()
-	{
-		Console.WriteLine("--- Started ---");
-		Solution();
-		Console.WriteLine("--- Finished ---");
-	}
+	//static void Main()
+	//{
+	//	Console.WriteLine("--- Started ---");
+	//	Solution();
+	//	Console.WriteLine("--- Finished ---");
+	//}
 
 	static void Solution()
 	{
