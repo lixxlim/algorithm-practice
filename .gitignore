@@ -6,8 +6,6 @@ atcoder/*
 .git/*
 .vscode/*
 *.swp
-python/.idea/*
-java/.idea/*
 *.iml
 
 #other
@@ -20,7 +18,7 @@ out/
 !.java
 javac/javac.iml
 javac/out
-javac/.idea/*
+*/.idea/*
 
 ### NetBeans ###
 /nbproject/private/
