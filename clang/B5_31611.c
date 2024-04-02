@@ -8,4 +8,5 @@ int main(void)
 	scanf("%d", &n);
 	printf("%d", (n-2)%7 == 0 ? 1 : 0);
 	return 0;
+	
 }
