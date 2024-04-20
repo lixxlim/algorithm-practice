@@ -3,12 +3,12 @@
 
 class B_13136
 {
-	static void Main()
-	{
-		Console.WriteLine("--- Started ---");
-		Solution();
-		Console.WriteLine("--- Finished ---");
-	}
+//	static void Main()
+//	{
+//		Console.WriteLine("--- Started ---");
+//		Solution();
+//		Console.WriteLine("--- Finished ---");
+//	}
 
 	static void Solution()
 	{
