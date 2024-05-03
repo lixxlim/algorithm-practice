@@ -29,3 +29,5 @@ javac/out
 
 # Clang
 *.out
+cshap/bin/*
+cshap/obj/*
