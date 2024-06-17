@@ -1,5 +1,6 @@
 /*
  * https://www.acmicpc.net/problem/1384
+ * Time: 02:24:09
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +11,7 @@
 int main( void )
 {
 	// 변수선언
-	int i, j;
+	int i, j, k;
 	int groupNo = 1;
 	int groupNum;
 	
@@ -25,11 +26,10 @@ int main( void )
 		if( !groupNum ) break;
 		
 		// 나쁜말 리스트를 저장할 숫자 배열
-		//int **nastys = (int **)malloc( groupNum * sizeof( int* ) );
-		int nastys[
+		int **nastys = (int **)malloc( groupNum * sizeof( int* ) );
 		
 		// 이름을 받을 포인터변수 선언
-		//char **names = (char **)malloc( groupNum * sizeof( char* ) );
+		char **names = (char **)malloc( groupNum * sizeof( char* ) );
 		
 		// 그룹 인원수만큼 반복처리
 		for( i = 0; i < groupNum; i++ ) {
@@ -37,41 +37,42 @@ int main( void )
 			nastys[ i ] = (int *)calloc( groupNum, sizeof( int ) );
 			names[ i ] = (char *)malloc( MAXNAME * sizeof( char ) );
 			
-			// 아이들 이름 입력받기
-			scanf( "%s", names[ i ] );
-			printf("%d번 name: %s\n", i, names[ i ]);
-			
-			// 입력버퍼 비우기
-			getchar();
-				
-			// 쪽지 입력 받기
+			// -1로 초기화
 			for( j = 0; j < groupNum; j++ ) {
+				nastys[ i ][ j ] = -1;
+			}
+			
+			// 아이들 이름 입력받기
+			scanf( "%s", &names[ i ][ 0 ] );
+			
+			// 쪽지 입력 받기
+			k = 0;
+			for( j = 0; j < groupNum - 1; j++ ) {
 				// 임시변수 선언
-				char c;
-				scanf( "%c", &c );
-				
-				// 입력버퍼 비우기
-				getchar();
+				char c[2];
+				scanf( "%s", &c );
 				
 				// 만약 쪽지 글이 나쁜말이면 나쁜말 리스트에 누군지 추가
-				if( c == 'N' ) {
-					nastys[ i ][ ( abs(j - (groupNo-1)) + i ) % groupNo ] = 1;
-					printf("i= %s[%d], j= %s[%d]\n", names[ i ], i, names[ ( abs(j - (groupNo-1)) + i ) % groupNo ], ( abs(j - (groupNo-1)) + i ) % groupNo ]);
+				if( strcmp( c, "N" ) == 0 ) {
+					nastys[ i ][ k++ ] = ( abs(j - (groupNum-1)) + i ) % groupNum;
 				}
 			}
 		}
 		
 		// 누가 나쁜말 했는지 출력
+		int isZero = 1;
 		printf("Group %d\n", groupNo++);
 		for( i = 0; i < groupNum; i++ ) {
 			for( j = 0; j < groupNum; j++ ) {
-				// 본인을 가리키는 포인터라면 패스하고 다음으로
-				if( i == j ) continue;
-				// j가 i에게 나쁜말 했음
-				if( nastys[ i ][ j ] ) {
-					printf("%s was nasty about %s\n", names[ j ], names[ i ]);
+				if( nastys[ i ][ j ] == -1 ) {
+					break;
 				}
+				isZero = 0;
+				printf("%s was nasty about %s\n", names[ nastys[ i ][ j ] ], names[ i ]);
 			}
+		}
+		if( isZero ) {
+			printf("Nobody was nasty\n");
 		}
 		printf("\n");
 		
