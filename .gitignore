@@ -32,3 +32,4 @@ javac/out
 cshap/bin/*
 cshap/obj/*
 do
+core
