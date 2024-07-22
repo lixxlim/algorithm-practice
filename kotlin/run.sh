@@ -6,7 +6,7 @@ if [ $# -ge 1 ]; then
 		java -jar run.jar
 		rm run.jar
 	else
-		echo "Not installed kotlin complier"
+		echo "*Notice: It seems to be not installed kotlin complier. Please Run init process."
 	fi
 else
 	echo "---------------------"
