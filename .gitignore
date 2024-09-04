@@ -26,6 +26,7 @@ javac/out
 /dist/
 /nbdist/
 /.nb-gradle/
+/.fleet/*
 
 # Clang
 *.out
