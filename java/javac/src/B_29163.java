@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Arrays;
 
-public class B_29163 {
+class B_29163 {
     public static void main(String[] args) throws IOException {
         try(var br = new BufferedReader(new InputStreamReader(System.in))) {
             int n = Integer.parseInt(br.readLine());

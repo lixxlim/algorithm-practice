@@ -1,7 +1,6 @@
 //// https://www.acmicpc.net/problem/10156
 import java.io.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 class Main {
 	public static void main(String[] args) throws IOException {

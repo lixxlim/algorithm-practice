@@ -41,7 +41,6 @@ public class S2_1260 {
     }
 
     public static String bfs(int[][] graph, Stack<Integer> stack) {
-        int target = stack.pop();
         return "";
     }
 
