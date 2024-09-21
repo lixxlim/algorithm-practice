@@ -11,41 +11,39 @@ class Main {
     public static void main(String[] args) throws IOException {
         try(var br = new BufferedReader(new InputStreamReader(System.in));
             var bw = new BufferedWriter(new OutputStreamWriter(System.out))) {
-            while(true) {
-                String[] inp = br.readLine().split(" ");
-                if(inp[0].equals(END_MARKER)) break;
+            String input;
+            while(!(input = br.readLine()).equals(END_MARKER)) {
+                char[] guess = input.split(" ")[0].toCharArray();
+                char[] target = input.split(" ")[1].toCharArray();
 
-                char[] guess = inp[0].toCharArray();
-                char[] target = inp[1].toCharArray();
-                int b = 0, g = 0, w = 0, len = inp[0].length();
+                int black = 0;
+                int gray = 0;
+                int white = 0;
 
-                for(int i = 0; i < len; i++) {
+                for(int i = 0; i < guess.length; i++) {
                     if(target[i] == guess[i]) {
-                        b++;
-                        target[i] = EMPTY;
-                        guess[i] = EMPTY;
+                        black++;
+                        target[i] = guess[i] = EMPTY;
                     }
                 }
-                for(int i = 0; i < len; i++) {
+                for(int i = 0; i < guess.length; i++) {
                     if(guess[i] == EMPTY) continue;
                     if(i !=0 && target[i-1] == guess[i] ) {
-                        g++;
-                        target[i-1] = EMPTY;
-                        guess[i] = EMPTY;
+                        gray++;
+                        target[i-1] = guess[i] = EMPTY;
                     }
-                    else if(i != len-1 && target[i+1] == guess[i]) {
-                        g++;
-                        target[i+1] = EMPTY;
-                        guess[i] = EMPTY;
+                    else if(i != guess.length-1 && target[i+1] == guess[i]) {
+                        gray++;
+                        target[i+1] = guess[i] = EMPTY;
                     }
                 }
-                for(int i = 0; i < len; i++) {
+                for(int i = 0; i < guess.length; i++) {
                     if(guess[i] == EMPTY) continue;
                     if(String.valueOf(target).contains(String.valueOf(guess[i]))){
-                        w++;
+                        white++;
                     }
                 }
-                bw.write(String.format("%s: %d black, %d grey, %d white\n", inp[1], b, g, w));
+                bw.write(String.format("%s: %d black, %d grey, %d white\n", input.split(" ")[1], black, gray, white));
             }
             bw.flush();
         }
