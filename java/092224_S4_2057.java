@@ -33,7 +33,6 @@ class Main {
             return "NO";
         }
 
-        long temp = n;
         for(int i = 20; i >= 0; i--) {
             if(n >= factorial[i]) {
                 n -= factorial[i];
