@@ -34,3 +34,6 @@ cshap/bin/*
 cshap/obj/*
 do
 core
+
+# Python
+*/.venv/*
