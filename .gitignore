@@ -37,3 +37,6 @@ core
 
 # Python
 */.venv/*
+
+# C#
+cshap/obj/*
