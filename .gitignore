@@ -40,3 +40,8 @@ core
 
 # C#
 cshap/obj/*
+
+# Rust
+*/target/*
+Cargo.lock
+Cargo.toml
