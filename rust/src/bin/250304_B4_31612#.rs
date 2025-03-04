@@ -34,3 +34,28 @@ fn read_str() -> Result<String, Box<dyn Error>> {
     io::stdin().read_line(&mut inp)?;
     Ok(inp)
 }
+
+
+/*
+use { std::io, std::error::Error };
+
+fn main() {
+    let _n = read_inp().unwrap();
+    let s = read_inp().unwrap();
+    let mut sum = 0;
+    for char in s.chars() {
+        sum += match char {
+            'i' | 'j' => 2,
+            'o' => 1,
+            _ => 0,
+        }
+    }
+    println!("{}", sum);
+}
+
+fn read_inp() -> Result<String, Box<dyn Error>> {
+    let mut inp = String::new();
+    io::stdin().read_line(&mut inp)?;
+    Ok(inp.trim().to_string())
+}
+*/
