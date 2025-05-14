@@ -7,7 +7,7 @@ class Deal(Enum):
     WAIT = 2
 
 class Stratege(Enum):
-    BNF = 0
+    BNP = 0
     TIMING = 1
 
 class Person:
@@ -21,22 +21,30 @@ class Person:
     def do_stratege(self, price):
         # 행동 결정
         deal = Deal.WAIT
-        if self.stratege == Stratege.BNF:
-            # BNF는 항상 구매
+        if self.stratege == Stratege.BNP:
+            # BNP는 항상 구매
             deal = Deal.BUY
         elif self.stratege == Stratege.TIMING:
             # 가격변동 기록
             if self.before_price < price:
-                self.move_history = max(1, self.move_history + 1)
+                if self.move_history < 0:
+                    self.move_history = 1
+                else:
+                    self.move_history += 1
             elif self.before_price > price:
-                self.move_history -= min(-1, self.move_history - 1)
+                if self.move_history > 0:
+                    self.move_history = -1
+                else:
+                    self.move_history -= 1
             else:
                 self.move_history = 0
             # 가격변동에 따른 행동 결정
             if self.move_history >= 3:
-                deal = Deal.SELL
-            elif self.move_history <= 3:
-                deal = Deal.BUY
+                if self.stock > 0:
+                    deal = Deal.SELL
+            elif self.move_history <= -3:
+                if self.money >= price:
+                    deal = Deal.BUY
         # 결정된 행동 실행
         if deal == Deal.BUY:
             self.stock += self.money // price
@@ -54,17 +62,15 @@ class Person:
 
 if __name__ == "__main__":
     money = int(input())
-    jun_hyon = Person(Stratege.BNF, money)
+    jun_hyon = Person(Stratege.BNP, money)
     sung_min = Person(Stratege.TIMING, money)
     machine_duck = map(int, input().split())
     for price in machine_duck:
         jun_hyon.do_stratege(price)
         sung_min.do_stratege(price)
     if jun_hyon.get_result() > sung_min.get_result():
-        print("jun", jun_hyon.money, "sung", sung_min.money)
         print(jun_hyon.stratege.name)
     elif jun_hyon.get_result() < sung_min.get_result():
-        print("jun", jun_hyon.money, "sung", sung_min.money)
         print(sung_min.stratege.name)
     else:
         print("SAMESAME")
